@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 01, 2021 at 05:49 AM
+-- Generation Time: Apr 01, 2021 at 06:12 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `problem2_cms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reports`
+--
+
+CREATE TABLE `reports` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `createdOn` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `reports`
+--
+
+INSERT INTO `reports` (`id`, `user_id`, `content`, `createdOn`) VALUES
+(1, 4, ' adasds', NULL),
+(2, 4, 'aaegawrghwgeagaeg', NULL),
+(3, 4, 'aasdsadadasdasd', NULL),
+(4, 4, ' adasd', NULL),
+(7, 11, ' dgaswzgasgasfg', NULL),
+(8, 15, ' adadadadas', NULL),
+(9, 15, ' adadadadasadasdasd', NULL),
+(10, 15, ' adasdas', NULL);
 
 -- --------------------------------------------------------
 
@@ -56,6 +83,12 @@ INSERT INTO `users` (`id`, `username`, `passkey`, `privlevel`, `createdOn`, `upd
 --
 
 --
+-- Indexes for table `reports`
+--
+ALTER TABLE `reports`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -64,6 +97,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `reports`
+--
+ALTER TABLE `reports`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`
