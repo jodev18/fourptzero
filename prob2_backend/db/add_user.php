@@ -21,6 +21,20 @@ if(!empty($_POST['n_user']) && !empty($_POST['n_pass'])){
         echo "Error: " . $sql . "<br>" . $conn->error;
       }
     }
+    else{
+      $pp = $_POST['priv'];
+
+      //Promise I won't do this on production
+      $sql = "INSERT INTO users(username,passkey,privlevel) VALUES ('$new_user','$hashed',$pp)";
+
+      if ($conn->query($sql) === TRUE) {
+          echo "<script> alert('User registered.'); </script>";
+          echo "<script> window.history.back(); </script>";
+      }
+      else{
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+    }
 }
 else{
   echo "<script> window.history.back(); </script>";

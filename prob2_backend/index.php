@@ -22,10 +22,13 @@
           while($row = $passq->fetch_assoc()){
               $pass = $row['passkey'];
               $priv = $row['privlevel'];
+              $usrid = $row['id'];
           }
           if(password_verify($loginpass,$pass)){
             $_SESSION['curr_priv'] = $priv;
             $_SESSION['curr_user'] = $user;
+            $_SESSION['curr_userid'] = $usrid;
+
             echo "<script> window.location.href = \"dashboard.php\"; </script>";
           }
           else{

@@ -1,6 +1,6 @@
 <div class="add-user">
     <h4>Add User</h4>
-    <form class="add-user-form" action="index.html" method="post">
+    <form class="add-user-form" action="db/add_user.php" method="post">
         <div class="input-new-user-field">
           <label for="n_user">New username:</label>
           <input type="text" class="input-new-user" name="n_user" value="" placeholder="Enter new username">
