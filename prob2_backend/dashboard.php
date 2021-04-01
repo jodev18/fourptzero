@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start(); if(empty($_SESSION['curr_userid'])){echo "<script> window.location.href = \"index.php\"; </script>";}?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
